@@ -17,6 +17,13 @@ module Remit
       parameter :refund_sender_token_id, :required => true
       parameter :transaction_date
       parameter :transaction_id, :required => true
+      #MarketplaceRefundPolicy is available in these APIs:
+      # Amazon FPS Advanced Quick Start
+      # Amazon FPS Marketplace Quick Start
+      # Amazon FPS Aggregated Payments Quick Start 
+      # i.e. Not Basic Quick Start
+      #Amazon Docs list it as a ComplexDataType, but it is not.  It really should be listed under Enumerated DataTypes
+      parameter :marketplace_refund_policy
 
       # The RefundAmount parameter has multiple components.  It is specified on the query string like
       # so: RefundAmount.Amount=XXX&RefundAmount.CurrencyCode=YYY

@@ -151,6 +151,23 @@ module Remit
       parameter :soft_descriptor_type
       parameter :CS_number_of
     end
+    
+    #Amazon Docs list MarketplaceRefundPolicy as a ComplexDataType, but it is not.
+    #It really should be listed under Enumerated DataTypes
+    #MarketplaceTxnOnly      Caller refunds his fee to the recipient.             String
+    #MasterAndMarketplaceTxn Caller and Amazon FPS refund their fees to the       String
+    #                        sender, and the recipient refunds his amount
+    #MasterTxnOnly           Caller does not refund his fee. Amazon FPS           String
+    #                        refunds its fee and the recipient refunds his amount
+    #                        plus the caller's fee to the sender.
+    class MarketplaceRefundPolicy < Remit::Request
+      POLICY = {
+        :marketplace_txn_only => 'MarketplaceTxnOnly',
+        :master_and_marketplace_txn => 'MasterAndMarketplaceTxn',
+        :master_txn_only => 'MasterTxnOnly'
+      }
+    end
+
   end
 
   class Operation
