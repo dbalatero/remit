@@ -9,7 +9,7 @@ require 'erb'
 
 require 'rubygems'
 
-gem 'relax', '0.0.7'
+gem 'pboling-relax', '0.0.7.1'
 require 'relax'
 
 require 'remit/common'
