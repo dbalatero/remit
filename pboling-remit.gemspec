@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name = 'pboling-remit'
-  s.version = '0.0.2.1'
+  s.version = '0.0.2.2'
   s.summary = "AWS FPS Ruby API"
   s.description = %{Ruby API for Amazon Web Services Flexible Payment Service}
   s.files = Dir['lib/**/*.rb'] + Dir['spec/**/*.rb']
