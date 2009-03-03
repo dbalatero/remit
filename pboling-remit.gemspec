@@ -1,5 +1,5 @@
 spec = Gem::Specification.new do |s|
-  s.name = 'remit'
+  s.name = 'pboling-remit'
   s.version = '0.0.2.1'
   s.summary = "AWS FPS Ruby API"
   s.description = %{Ruby API for Amazon Web Services Flexible Payment Service}
