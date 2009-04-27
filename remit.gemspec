@@ -2,7 +2,7 @@
 
 spec = Gem::Specification.new do |s|
   s.name = %q{remit}
-  s.version = %q{0.0.2.5}
+  s.version = %q{0.0.2.6}
   s.date = %q{2009-03-03}
   s.summary = %q{AWS FPS Ruby API}
   s.description = %{Ruby API for Amazon Web Services Flexible Payment Service}

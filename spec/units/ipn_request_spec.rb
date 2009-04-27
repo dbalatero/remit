@@ -4,7 +4,6 @@ describe 'an IPN request' do
   before(:each) do
     @request_params = {
       "action"            => "notice",
-      "awsSignature"      => "DA7ZbuQaBDt2/+Mty9XweJyqI1E=",
       "buyerName"         => "Fps Buyer",
       "callerReference"   => "4-8-1-3.5",
       "controller"        => "amazon_fps/ipn",
@@ -12,12 +11,14 @@ describe 'an IPN request' do
       "paymentMethod"     => "CC",
       "recipientEmail"    => "recipient@email.url",
       "recipientName"     => "Fps Business",
+      "signature"      => "DA7ZbuQaBDt2/+Mty9XweJyqI1E=",
       "status"            => "SUCCESS",
       "transactionAmount" => "USD 3.50",
       "transactionDate"   => "1224687134",
       "transactionId"     => "13KIGL9RC25853BGPPOS2VSKBKF2JERR3HO"
     }
-    @request = Remit::IpnRequest.new(@request_params, 'THISISMYTESTKEY')
+    @test_key = 'THISISMYTESTKEY'
+    @request = Remit::IpnRequest.new(@request_params, @test_key)
   end
 
   it 'should be a valid request' do
